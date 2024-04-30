@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/randevu_navigation"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/signinFragment"
+        android:name="com.olgunbingol.appointment_center.view.signinFragment"
+        android:label="fragment_signin"
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/action_signinFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.olgunbingol.appointment_center.view.startFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_signinFragment"
+            app:destination="@id/signinFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.olgunbingol.appointment_center.view.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_randevuFragment"
+            app:destination="@id/randevuFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_randevularimFragment"
+            app:destination="@id/randevularimFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_taleplerimFragment"
+            app:destination="@id/taleplerimFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taleplerimFragment"
+        android:name="com.olgunbingol.appointment_center.view.taleplerimFragment"
+        android:label="fragment_taleplerim"
+        tools:layout="@layout/fragment_taleplerim" />
+    <fragment
+        android:id="@+id/randevularimFragment"
+        android:name="com.olgunbingol.appointment_center.view.randevularimFragment"
+        android:label="fragment_randevularim"
+        tools:layout="@layout/fragment_randevularim" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.olgunbingol.appointment_center.view.menuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_nobetcieczaneFragment"
+            app:destination="@id/nobetcieczaneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yakinhastaneFragment"
+        android:name="com.olgunbingol.appointment_center.view.yakinhastaneFragment"
+        android:label="fragment_yakinhastane"
+        tools:layout="@layout/fragment_yakinhastane" />
+    <fragment
+        android:id="@+id/nobetcieczaneFragment"
+        android:name="com.olgunbingol.appointment_center.view.nobetcieczaneFragment"
+        android:label="fragment_nobetcieczane"
+        tools:layout="@layout/fragment_nobetcieczane" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.olgunbingol.appointment_center.view.infoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/randevuFragment"
+        android:name="com.olgunbingol.appointment_center.view.randevuFragment"
+        android:label="fragment_randevu"
+        tools:layout="@layout/fragment_randevu" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.olgunbingol.appointment_center.view.settingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.olgunbingol.appointment_center.view.resetPasswordFragment"
+        android:label="fragment_reset_password"
+        tools:layout="@layout/fragment_reset_password" >
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+</navigation>
